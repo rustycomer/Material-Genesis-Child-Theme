@@ -14,12 +14,17 @@ function genesis_sample_google_fonts() {
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700|Roboto:300,400', array(), CHILD_THEME_VERSION );
 
 }
-
+// Adding Material Bootstrap and jQuery
 add_action( 'wp_enqueue_scripts', 'add_material_bootstrap');
 function add_material_bootstrap(){
 
+
 	wp_enqueue_style( 'md_bootstrap_css', '//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css', array(), CHILD_THEME_VERSION );
 	wp_enqueue_script( 'md_bootstrap_js', '//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/js/mdb.min.js', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/style.css' );
+	wp_enqueue_script( 'jQuery-targets', get_stylesheet_directory_uri() . '/js/filters.js', array( 'jquery' ), NULL, false);
+
+
 
 }
 
@@ -40,19 +45,18 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 
 
 // Adding custom styles to the login form
-function my_custom_files() {
-    wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/style.css' );
-		wp_enqueue_script( 'jQuery-targets', get_template_directory_uri() . '/js/filters.js')
-
-}
-add_action( 'custom_enqueue_scripts', 'my_custom_files' );
+// function my_custom_files() {
+//
+//
+// }
+// add_action( 'custom_enqueue_scripts', 'my_custom_files' );
 
 // Adding the function to change html classes to give MD Bootstrap the functionality it needs
 //* Add z depth classes to header
 add_filter( 'genesis_attr_site-header', 'append_zdepth_class' );
 add_filter( 'genesis_attr_nav-primary', 'append_zdepth_class' );
 add_filter( 'genesis_attr_entry', 'append_zdepth_class' );
-add_filter( 'genesis_attr_sidebar-primary', 'append_zdepth_class' );
+// add_filter( 'genesis_attr_sidebar-primary', 'append_zdepth_class' );
 function append_zdepth_class( $attributes ) {
  $attributes['class'] .= ' z-depth-2';
 return $attributes;
