@@ -40,11 +40,12 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 
 
 // Adding custom styles to the login form
-function my_login_stylesheet() {
+function my_custom_files() {
     wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/style.css' );
+		wp_enqueue_script( 'jQuery-targets', get_template_directory_uri() . '/js/filters.js')
 
 }
-add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+add_action( 'custom_enqueue_scripts', 'my_custom_files' );
 
 // Adding the function to change html classes to give MD Bootstrap the functionality it needs
 //* Add z depth classes to header
