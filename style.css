@@ -173,11 +173,7 @@ textarea:focus,
 	transition:         all 0.1s ease-in-out;
 }
 
-input {
-	font-size: 1.15em;
-	border: none;
-	border-bottom: 1px solid white;
-}
+
 
 a {
 	color: #f44336;
@@ -371,7 +367,7 @@ input,
 select,
 textarea {
 	background-color: #fff;
-	border: 1px solid #ddd;
+	/* border: 1px solid #ddd; */
 	color: #333;
 	font-size: 18px;
 	font-size: 1.8rem;
@@ -382,7 +378,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-	border: 1px solid #999;
+	/* border: 1px solid #999; */
 	outline: none;
 }
 
@@ -408,7 +404,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	background-color: #333;
+	background-color: #f44336;
 	border: 0;
 	color: #fff;
 	cursor: pointer;
@@ -430,7 +426,7 @@ input:focus[type="button"],
 input:focus[type="reset"],
 input:focus[type="submit"],
 .button:focus  {
-	background-color: #c3251d;
+	background-color: #ba000d;
 	color: #fff;
 }
 
@@ -444,7 +440,7 @@ input:focus[type="submit"],
 .footer-widgets input[type="reset"],
 .footer-widgets input[type="submit"],
 .footer-widgets .button {
-	background-color: #c3251d;
+	background-color: #f44336;
 	color: #fff;
 }
 
@@ -732,7 +728,7 @@ th {
 
 .search-form {
 	overflow: hidden;
-
+	color: #444;
 }
 
 .site-header .search-form {
@@ -744,6 +740,11 @@ th {
 .site-header .search-form {
 	width: 50%;
 
+}
+
+input[type="search"]{
+	color: #444;
+	font-size: 1.15em;
 }
 
 .genesis-nav-menu .search input[type="submit"],
@@ -1293,6 +1294,10 @@ p.entry-meta {
 .entry-comments-link::before {
 	content: "\2014";
 	margin: 0 6px 0 2px;
+}
+
+.entry input, .entry textarea {
+	color: #444;
 }
 
 /* ## Pagination

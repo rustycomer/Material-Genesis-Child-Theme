@@ -58,13 +58,6 @@ add_filter( 'genesis_attr_nav-primary', 'append_zdepth_class' );
 add_filter( 'genesis_attr_entry', 'append_zdepth_class' );
 // add_filter( 'genesis_attr_sidebar-primary', 'append_zdepth_class' );
 function append_zdepth_class( $attributes ) {
- $attributes['class'] .= ' z-depth-2';
+ $attributes['class'] .= ' z-depth-3';
 return $attributes;
 }
-
-function add_form_classes( $attributes ){
-	$attributes['class'] .= ' form-control';
-	return $attributes;
-}
-
-add_filter( 'genesis_attr_input', 'add_form_classes');
