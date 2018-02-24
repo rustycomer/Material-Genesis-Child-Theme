@@ -18,11 +18,11 @@ function genesis_sample_google_fonts() {
 add_action( 'wp_enqueue_scripts', 'add_material_bootstrap');
 function add_material_bootstrap(){
 
-
+	wp_enqueue_script( 'jQuery-targets', get_stylesheet_directory_uri() . '/js/filters.js', array( 'jquery' ), NULL, false);
 	wp_enqueue_style( 'md_bootstrap_css', '//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css', array(), CHILD_THEME_VERSION );
 	wp_enqueue_script( 'md_bootstrap_js', '//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/js/mdb.min.js', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/style.css' );
-	wp_enqueue_script( 'jQuery-targets', get_stylesheet_directory_uri() . '/js/filters.js', array( 'jquery' ), NULL, false);
+
 
 
 
@@ -62,8 +62,9 @@ function append_zdepth_class( $attributes ) {
 return $attributes;
 }
 
-add_filter( 'input', 'append_form_class' );
-function append_form_class( $attributes ) {
-	$attributes['class'] .= 'form-control';
+function add_form_classes( $attributes ){
+	$attributes['class'] .= ' form-control';
 	return $attributes;
 }
+
+add_filter( 'genesis_attr_input', 'add_form_classes');
