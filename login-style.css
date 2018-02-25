@@ -1,0 +1,24 @@
+#wp-submit {
+  float: right;
+}
+
+.login h1 a {
+	background-image: none;
+	background-image: none, url('http://russellcomer.com/wp-content/uploads/2015/07/Namelogofinal.png');
+	background-size: 263px 55px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	color: #999;
+	height: 55px;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 1.3em;
+	margin: 0 auto 25px;
+	padding: 0;
+	text-decoration: none;
+	width: 263px;
+	text-indent: -9999px;
+	outline: none;
+	overflow: hidden;
+	display: block;
+}
