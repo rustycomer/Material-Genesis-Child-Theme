@@ -6,7 +6,7 @@ Author: Russell Comer
 Author URI: https://crimsonquest.com
 Template: genesis
 Template Version: 2.2.2
-Tags: material design, bootstrap, responsive, genesis 
+Tags: material design, bootstrap, responsive, genesis
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -374,12 +374,14 @@ textarea {
 	font-weight: 300;
 	padding: 16px;
 	width: 100%;
+	min-height: 50px;
 }
 
 input:focus,
 textarea:focus {
 	/* border: 1px solid #999; */
 	outline: none;
+	min-height: 50px;
 }
 
 input[type="checkbox"],
@@ -465,6 +467,14 @@ input:focus[type="submit"],
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button {
 	display: none;
+}
+
+.g-forms {
+	box-shadow: none;
+}
+
+.gform_button, button {
+	color: #ffffff!important;
 }
 
 /* ## Tables
@@ -1071,7 +1081,7 @@ img.alignright,
 
 .genesis-nav-menu {
 	clear: both;
-	font-size: 1.15em;
+	font-size: 1.05em;
 	font-family: 'Roboto';
 	line-height: 1;
 	width: 100%;
